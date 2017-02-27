@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from  './course';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Welcome to the Course Planner';
+  courses  : Course[]
+
+  constructor()
+  {
+    this.courses = [ {
+      academy : 'EASV',
+      year : 2017,
+      title : 'angular2',
+      education : 'Computer Science',
+      lecturer : 'Lars Bilde'
+    },
+      {
+        academy : 'EASV',
+        year : 2017,
+        title : 'ITO',
+        education : 'Computer Science',
+        lecturer : 'Lars Bilde'
+      }];
+  }
 }
